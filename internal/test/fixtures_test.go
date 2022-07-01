@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/models"
-	"allaboutapps.dev/aw/go-starter/internal/test"
 	_ "github.com/lib/pq"
+	"github.com/trino-network/pay-srv/internal/models"
+	"github.com/trino-network/pay-srv/internal/test"
 	"github.com/volatiletech/null/v8"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )

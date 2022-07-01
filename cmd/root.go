@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"allaboutapps.dev/aw/go-starter/internal/config"
 	"github.com/spf13/cobra"
+	"github.com/trino-network/pay-srv/internal/config"
 )
 
 // rootCmd represents the base command when called without any subcommands

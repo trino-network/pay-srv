@@ -5,12 +5,12 @@ import (
 	"database/sql"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/models"
-	"allaboutapps.dev/aw/go-starter/internal/push"
-	"allaboutapps.dev/aw/go-starter/internal/push/provider"
-	"allaboutapps.dev/aw/go-starter/internal/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/models"
+	"github.com/trino-network/pay-srv/internal/push"
+	"github.com/trino-network/pay-srv/internal/push/provider"
+	"github.com/trino-network/pay-srv/internal/test"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )
 

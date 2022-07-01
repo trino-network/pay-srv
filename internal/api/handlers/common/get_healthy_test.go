@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/test"
 )
 
 func TestGetHealthySuccess(t *testing.T) {

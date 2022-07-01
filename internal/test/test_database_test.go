@@ -8,9 +8,9 @@ import (
 	"sync"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/test"
-	pUtil "allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/test"
+	pUtil "github.com/trino-network/pay-srv/internal/util"
 )
 
 func TestWithTestDatabaseConcurrentUsage(t *testing.T) {

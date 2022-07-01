@@ -5,13 +5,13 @@ import (
 	"net/http"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/models"
-	"allaboutapps.dev/aw/go-starter/internal/test"
-	"allaboutapps.dev/aw/go-starter/internal/types"
 	"github.com/go-openapi/strfmt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/models"
+	"github.com/trino-network/pay-srv/internal/test"
+	"github.com/trino-network/pay-srv/internal/types"
 )
 
 func TestGetUserInfo(t *testing.T) {

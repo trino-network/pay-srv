@@ -5,12 +5,12 @@ import (
 	"runtime"
 	"strings"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/handlers"
-	"allaboutapps.dev/aw/go-starter/internal/api/middleware"
 	"github.com/labstack/echo/v4"
 	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"github.com/rs/zerolog/log"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/handlers"
+	"github.com/trino-network/pay-srv/internal/api/middleware"
 
 	// #nosec G108 - pprof handlers (conditionally made available via http.DefaultServeMux)
 	"net/http/pprof"
@@ -187,6 +187,19 @@ func Init(s *api.Server) {
 
 		// Your other endpoints, typically secured by bearer auth, available at /api/v1/**
 		APIV1Push: s.Echo.Group("/api/v1/push", middleware.Auth(s)),
+		APIV1Test: s.Echo.Group("/api/v1/test"),
+
+		APIV1Invoice: s.Echo.Group("/api/v1/invoices", middleware.AuthWithConfig(middleware.AuthConfig{
+			S:    s,
+			Mode: middleware.AuthModeRequired,
+			Skipper: func(c echo.Context) bool {
+				if strings.HasPrefix(c.Path(), "/api/v1/invoices/payment") {
+					return true
+				}
+
+				return false
+			},
+		})),
 	}
 
 	// ---

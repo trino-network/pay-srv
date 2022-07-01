@@ -14,10 +14,10 @@ import (
 	"strings"
 	"sync"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/router"
-	"allaboutapps.dev/aw/go-starter/internal/config"
-	"allaboutapps.dev/aw/go-starter/internal/types"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/router"
+	"github.com/trino-network/pay-srv/internal/config"
+	"github.com/trino-network/pay-srv/internal/types"
 	"github.com/rs/zerolog"
 )
 

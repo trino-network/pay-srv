@@ -2,11 +2,13 @@
 package handlers
 
 import (
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/handlers/auth"
-	"allaboutapps.dev/aw/go-starter/internal/api/handlers/common"
-	"allaboutapps.dev/aw/go-starter/internal/api/handlers/push"
 	"github.com/labstack/echo/v4"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/handlers/auth"
+	"github.com/trino-network/pay-srv/internal/api/handlers/common"
+	"github.com/trino-network/pay-srv/internal/api/handlers/invoice"
+	"github.com/trino-network/pay-srv/internal/api/handlers/push"
+	"github.com/trino-network/pay-srv/internal/api/handlers/test"
 )
 
 func AttachAllRoutes(s *api.Server) {
@@ -24,7 +26,11 @@ func AttachAllRoutes(s *api.Server) {
 		common.GetReadyRoute(s),
 		common.GetSwaggerRoute(s),
 		common.GetVersionRoute(s),
+		invoice.GetPaymentRoute(s),
+		invoice.GetRoute(s),
+		invoice.PostCreateRoute(s),
 		push.GetPushTestRoute(s),
 		push.PostUpdatePushTokenRoute(s),
+		test.PostTestRoute(s),
 	}
 }

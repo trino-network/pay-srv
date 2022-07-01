@@ -5,26 +5,27 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-
-	"allaboutapps.dev/aw/go-starter/internal/config"
-	"allaboutapps.dev/aw/go-starter/internal/i18n"
-	"allaboutapps.dev/aw/go-starter/internal/mailer"
-	"allaboutapps.dev/aw/go-starter/internal/mailer/transport"
-	"allaboutapps.dev/aw/go-starter/internal/push"
-	"allaboutapps.dev/aw/go-starter/internal/push/provider"
 	"github.com/labstack/echo/v4"
 	"github.com/rs/zerolog/log"
+	"github.com/trino-network/pay-srv/internal/config"
+	"github.com/trino-network/pay-srv/internal/i18n"
+	"github.com/trino-network/pay-srv/internal/mailer"
+	"github.com/trino-network/pay-srv/internal/mailer/transport"
+	"github.com/trino-network/pay-srv/internal/push"
+	"github.com/trino-network/pay-srv/internal/push/provider"
 
 	// Import postgres driver for database/sql package
 	_ "github.com/lib/pq"
 )
 
 type Router struct {
-	Routes     []*echo.Route
-	Root       *echo.Group
-	Management *echo.Group
-	APIV1Auth  *echo.Group
-	APIV1Push  *echo.Group
+	Routes       []*echo.Route
+	Root         *echo.Group
+	Management   *echo.Group
+	APIV1Auth    *echo.Group
+	APIV1Push    *echo.Group
+	APIV1Invoice *echo.Group
+	APIV1Test    *echo.Group
 }
 
 type Server struct {
@@ -139,6 +140,8 @@ func (s *Server) Start() error {
 	if !s.Ready() {
 		return errors.New("server is not ready")
 	}
+
+	s.WatchPay(context.Background())
 
 	return s.Echo.Start(s.Config.Echo.ListenAddress)
 }

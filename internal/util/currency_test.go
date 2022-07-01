@@ -3,8 +3,8 @@ package util_test
 import (
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/trino-network/pay-srv/internal/util"
 )
 
 func TestCurrencyConversion(t *testing.T) {

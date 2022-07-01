@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/push"
-	"allaboutapps.dev/aw/go-starter/internal/push/provider"
+	"github.com/trino-network/pay-srv/internal/push"
+	"github.com/trino-network/pay-srv/internal/push/provider"
 )
 
 func WithTestPusher(t *testing.T, closure func(p *push.Service, db *sql.DB)) {

@@ -1,0 +1,141 @@
+swagger: "2.0"
+info:
+  title: github.com/trino-network/pay-srv
+  version: 0.1.0
+paths: {}
+definitions:
+  PostCreateInvoicePayload:
+    type: object
+    required:
+      - title
+      - network
+      - recipient
+      - amount
+      - jump_url
+      - notify_url
+      - metadata
+    properties:
+      title:
+        description: 标题，在支付页面显示
+        type: string
+        maxLength: 256
+        minLength: 1
+        example: 支付订单NO：23435435646
+      network:
+        description: 支付所用的区块链网络
+        type: string
+        enum:
+          - ethereum
+          - bsc
+          - polygon
+          - solana
+          - near
+          - goerli
+        example: ethereum
+      recipient:
+        description: recipient
+        type: string
+        maxLength: 256
+        minLength: 1
+        example: 0xe29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE
+      amount:
+        description: amount
+        type: integer
+        example: 234535435345
+      jump_url:
+        description: jump url
+        type: string
+        example: http://xxx/order/xxx
+      notify_url:
+        description: notify url
+        type: string
+        example: http://xxx/order/xxx
+      metadata:
+        description: 用户自定义元数据，base64
+        type: string
+        maxLength: 512
+        minLength: 0
+        example: e29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE
+
+  PostCreateInvoiceResponse:
+    type: object
+    required:
+      - invoice_id
+      - jump_url
+    properties:
+      invoice_id:
+        description: invoice id
+        type: string
+        format: uuid4
+        example: 7503cd8a-c921-4368-a32d-6c1d01d86da9
+      jump_url:
+        description: 跳转到支付页面
+        type: string
+        example: https://xxx.com
+
+  GetInvoiceResponse:
+    type: object
+    required:
+      - status
+      - txn_hash
+      - metadata
+    properties:
+      status:
+        description: status
+        type: string
+        enum:
+          - unpaid
+          - paid
+          - notified
+        example: success
+      txn_hash:
+        description: txn hash
+        type: string
+        example: 0xa477aae4aa81df7c7b108bcc65450c7fa36b77f671b2768759e6485acd10f507
+      metadata:
+        description: 用户自定义元数据，base64
+        type: string
+        maxLength: 512
+        minLength: 0
+        example: e29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE
+
+  GetInvoicePaymentInfoResponse:
+    type: object
+    required:
+      - title
+      - network
+      - recipient
+      - amount
+      - jump_url
+    properties:
+      title:
+        description: 标题，在支付页面显示
+        type: string
+        maxLength: 256
+        minLength: 1
+        example: 支付订单NO：23435435646
+      network:
+        description: network
+        type: string
+        enum:
+          - ethereum
+          - bsc
+          - polygon
+          - solana
+          - near
+          - goerli
+        example: ethereum
+      recipient:
+        description: recipient
+        type: string
+        maxLength: 256
+        minLength: 1
+        example: 0xe29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE
+      amount:
+        description: amount
+        type: integer
+        example: 234535435345
+      jump_url:
+        description: jump url
+        type: string
+        example: http://xxx/order/xxx

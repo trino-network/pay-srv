@@ -9,13 +9,13 @@ import (
 	"sync"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/config"
-	"allaboutapps.dev/aw/go-starter/internal/i18n"
-	"allaboutapps.dev/aw/go-starter/internal/test"
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/config"
+	"github.com/trino-network/pay-srv/internal/i18n"
+	"github.com/trino-network/pay-srv/internal/test"
+	"github.com/trino-network/pay-srv/internal/util"
 	"golang.org/x/text/language"
 )
 

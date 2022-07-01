@@ -3,7 +3,7 @@ package auth
 import (
 	"time"
 
-	"allaboutapps.dev/aw/go-starter/internal/models"
+	"github.com/trino-network/pay-srv/internal/models"
 )
 
 type AuthenticationResult struct {

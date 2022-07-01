@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"allaboutapps.dev/aw/go-starter/internal/config"
-	"allaboutapps.dev/aw/go-starter/internal/data"
-	dbutil "allaboutapps.dev/aw/go-starter/internal/util/db"
 	"github.com/spf13/cobra"
+	"github.com/trino-network/pay-srv/internal/config"
+	"github.com/trino-network/pay-srv/internal/data"
+	dbutil "github.com/trino-network/pay-srv/internal/util/db"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )
 

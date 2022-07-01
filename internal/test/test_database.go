@@ -12,12 +12,12 @@ import (
 	"sync"
 	"testing"
 
-	pUtil "allaboutapps.dev/aw/go-starter/internal/util"
-	dbutil "allaboutapps.dev/aw/go-starter/internal/util/db"
 	"github.com/allaboutapps/integresql-client-go"
 	"github.com/allaboutapps/integresql-client-go/pkg/util"
 	"github.com/pkg/errors"
 	migrate "github.com/rubenv/sql-migrate"
+	pUtil "github.com/trino-network/pay-srv/internal/util"
+	dbutil "github.com/trino-network/pay-srv/internal/util/db"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )
 

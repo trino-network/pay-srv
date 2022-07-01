@@ -5,10 +5,10 @@ import (
 	"database/sql"
 	"fmt"
 
-	"allaboutapps.dev/aw/go-starter/internal/api/handlers/common"
-	"allaboutapps.dev/aw/go-starter/internal/config"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
+	"github.com/trino-network/pay-srv/internal/api/handlers/common"
+	"github.com/trino-network/pay-srv/internal/config"
 )
 
 // readinessCmd represents the server command

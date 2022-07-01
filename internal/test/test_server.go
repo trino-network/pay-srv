@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/router"
-	"allaboutapps.dev/aw/go-starter/internal/config"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/router"
+	"github.com/trino-network/pay-srv/internal/config"
 )
 
 // WithTestServer returns a fully configured server (using the default server config).

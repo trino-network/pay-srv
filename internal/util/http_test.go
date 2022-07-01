@@ -9,17 +9,17 @@ import (
 	"path/filepath"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/test"
-	"allaboutapps.dev/aw/go-starter/internal/types"
-	"allaboutapps.dev/aw/go-starter/internal/types/auth"
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/strfmt/conv"
 	"github.com/go-openapi/swag"
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/test"
+	"github.com/trino-network/pay-srv/internal/types"
+	"github.com/trino-network/pay-srv/internal/types/auth"
+	"github.com/trino-network/pay-srv/internal/util"
 )
 
 func TestBindAndValidateSuccess(t *testing.T) {

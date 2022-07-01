@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
 	"github.com/labstack/echo/v4"
+	"github.com/trino-network/pay-srv/internal/api"
 )
 
 func GetReadyRoute(s *api.Server) *echo.Route {

@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api/httperrors"
-	"allaboutapps.dev/aw/go-starter/internal/types"
 	"github.com/go-openapi/swag"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/api/httperrors"
+	"github.com/trino-network/pay-srv/internal/types"
 )
 
 func TestHTTPErrorSimple(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/trino-network/pay-srv/internal/util"
 )
 
 func TestWaitTimeoutErr(t *testing.T) {

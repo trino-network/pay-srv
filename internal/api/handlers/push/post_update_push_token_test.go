@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/httperrors"
-	"allaboutapps.dev/aw/go-starter/internal/models"
-	"allaboutapps.dev/aw/go-starter/internal/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/httperrors"
+	"github.com/trino-network/pay-srv/internal/models"
+	"github.com/trino-network/pay-srv/internal/test"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )
 

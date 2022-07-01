@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"allaboutapps.dev/aw/go-starter/internal/mailer/transport"
-	"allaboutapps.dev/aw/go-starter/internal/push/provider"
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/rs/zerolog"
+	"github.com/trino-network/pay-srv/internal/mailer/transport"
+	"github.com/trino-network/pay-srv/internal/push/provider"
+	"github.com/trino-network/pay-srv/internal/util"
 	"golang.org/x/text/language"
 )
 
@@ -172,7 +172,7 @@ func DefaultServiceConfigFromEnv() Server {
 				MntBaseDirAbs: util.GetEnv("SERVER_PATHS_MNT_BASE_DIR_ABS", filepath.Join(util.GetProjectRootDir(), "/assets/mnt")), // /app/assets/mnt (user-generated content)
 			},
 			Auth: AuthServer{
-				AccessTokenValidity:          time.Second * time.Duration(util.GetEnvAsInt("SERVER_AUTH_ACCESS_TOKEN_VALIDITY", 86400)),
+				AccessTokenValidity:          time.Second * time.Duration(util.GetEnvAsInt("SERVER_AUTH_ACCESS_TOKEN_VALIDITY", 8640000)),
 				PasswordResetTokenValidity:   time.Second * time.Duration(util.GetEnvAsInt("SERVER_AUTH_PASSWORD_RESET_TOKEN_VALIDITY", 900)),
 				DefaultUserScopes:            util.GetEnvAsStringArr("SERVER_AUTH_DEFAULT_USER_SCOPES", []string{"app"}),
 				LastAuthenticatedAtThreshold: time.Second * time.Duration(util.GetEnvAsInt("SERVER_AUTH_LAST_AUTHENTICATED_AT_THRESHOLD", 900)),

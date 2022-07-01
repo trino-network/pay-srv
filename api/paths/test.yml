@@ -1,0 +1,17 @@
+
+swagger: "2.0"
+info:
+  title: github.com/trino-network/pay-srv
+  version: 0.1.0
+paths:
+  /api/v1/test/test:
+    post:
+      summary: Get version
+      operationId: PostTestRoute
+      description: |-
+        This endpoint returns the module name, commit and build-date baked into the app binary.
+      tags:
+        - common
+      responses:
+        "200":
+          description: "ModuleName"

@@ -6,12 +6,12 @@ import (
 	"regexp"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/test"
-	"allaboutapps.dev/aw/go-starter/internal/test/mocks"
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/go-openapi/swag"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/trino-network/pay-srv/internal/test"
+	"github.com/trino-network/pay-srv/internal/test/mocks"
+	"github.com/trino-network/pay-srv/internal/util"
 )
 
 func TestSnapshot(t *testing.T) {

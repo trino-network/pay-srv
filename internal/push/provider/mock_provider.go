@@ -3,8 +3,8 @@ package provider
 import (
 	"errors"
 
-	"allaboutapps.dev/aw/go-starter/internal/push"
 	"github.com/rs/zerolog/log"
+	"github.com/trino-network/pay-srv/internal/push"
 )
 
 type Mock struct {

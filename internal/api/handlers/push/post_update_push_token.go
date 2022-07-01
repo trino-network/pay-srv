@@ -4,15 +4,15 @@ import (
 	"database/sql"
 	"net/http"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/auth"
-	"allaboutapps.dev/aw/go-starter/internal/api/httperrors"
-	"allaboutapps.dev/aw/go-starter/internal/models"
-	"allaboutapps.dev/aw/go-starter/internal/types"
-	"allaboutapps.dev/aw/go-starter/internal/util"
 	"github.com/labstack/echo/v4"
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/auth"
+	"github.com/trino-network/pay-srv/internal/api/httperrors"
+	"github.com/trino-network/pay-srv/internal/models"
+	"github.com/trino-network/pay-srv/internal/types"
+	"github.com/trino-network/pay-srv/internal/util"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )
 

@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"testing"
 
-	"allaboutapps.dev/aw/go-starter/internal/api"
-	"allaboutapps.dev/aw/go-starter/internal/api/httperrors"
-	"allaboutapps.dev/aw/go-starter/internal/api/middleware"
-	"allaboutapps.dev/aw/go-starter/internal/test"
 	"github.com/stretchr/testify/assert"
+	"github.com/trino-network/pay-srv/internal/api"
+	"github.com/trino-network/pay-srv/internal/api/httperrors"
+	"github.com/trino-network/pay-srv/internal/api/middleware"
+	"github.com/trino-network/pay-srv/internal/test"
 )
 
 func TestPostLogoutSuccess(t *testing.T) {
