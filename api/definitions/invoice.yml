@@ -33,25 +33,25 @@ definitions:
           - goerli
         example: ethereum
       recipient:
-        description: recipient
+        description: 收款人地址
         type: string
         maxLength: 256
         minLength: 1
         example: 0xe29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE
       amount:
-        description: amount
+        description: 金额
         type: integer
         example: 234535435345
       jump_url:
-        description: jump url
+        description: 支付成功后返回的页面
         type: string
         example: http://xxx/order/xxx
       notify_url:
-        description: notify url
+        description: 支付成功后回调地址
         type: string
-        example: http://xxx/order/xxx
+        example: http://xxx/nofity/xxx
       metadata:
-        description: 用户自定义元数据，base64
+        description: 元数据，base64。可以自己定义数据格式，例如放trade_no
         type: string
         maxLength: 512
         minLength: 0
@@ -64,12 +64,12 @@ definitions:
       - jump_url
     properties:
       invoice_id:
-        description: invoice id
+        description: 票据ID
         type: string
         format: uuid4
         example: 7503cd8a-c921-4368-a32d-6c1d01d86da9
       jump_url:
-        description: 跳转到支付页面
+        description: 跳转到支付页面URL
         type: string
         example: https://xxx.com
 
@@ -81,15 +81,15 @@ definitions:
       - metadata
     properties:
       status:
-        description: status
+        description: 支付状态
         type: string
         enum:
           - unpaid
           - paid
           - notified
-        example: success
+        example: unpaid
       txn_hash:
-        description: txn hash
+        description: 交易哈希值
         type: string
         example: 0xa477aae4aa81df7c7b108bcc65450c7fa36b77f671b2768759e6485acd10f507
       metadata:
@@ -115,7 +115,7 @@ definitions:
         minLength: 1
         example: 支付订单NO：23435435646
       network:
-        description: network
+        description: 所用的区块链网络，目前测试阶段只支持goerli
         type: string
         enum:
           - ethereum
@@ -126,16 +126,16 @@ definitions:
           - goerli
         example: ethereum
       recipient:
-        description: recipient
+        description: 收款人地址
         type: string
         maxLength: 256
         minLength: 1
         example: 0xe29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE
       amount:
-        description: amount
+        description: 数量
         type: integer
         example: 234535435345
       jump_url:
-        description: jump url
+        description: 支付成功后的跳转地址
         type: string
         example: http://xxx/order/xxx

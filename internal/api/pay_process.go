@@ -122,7 +122,7 @@ func (s *Server) notify(ctx context.Context, invoice *models.Invoice) error {
 		return err
 	}
 	data := make(map[string]string)
-	data["invoiceId"] = invoice.ID
+	data["invoice_id"] = invoice.ID
 	data["status"] = invoice.Status
 	jsonData, _ := json.Marshal(data)
 	sig := s.hmacSha256(jsonData, token.Token)
