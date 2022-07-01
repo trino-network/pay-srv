@@ -80,12 +80,22 @@ curl -X 'GET' \
 ```json
 {
   "metadata": "e29c1B698F98BdFe6Ca4012dEE6FB350D73E40AE",
-  "status": "notified",
+  "status": "paid",
   "txn_hash": "0xa477aae4aa81df7c7b108bcc65450c7fa36b77f671b2768759e6485acd10f507"
 }
 ```
 其中支付信息可以解码metadata获取
 
 PHP插件实现方式可以参考：https://github.com/trino-network/v2board/blob/master/app/Payments/BTCPay.php
+
+#### 支付页面开发可以参考：
+
+示例项目： https://github.com/remote-gildor/hardhat-vue-starter.git  
+
+trino合约代码：https://github.com/trino-network/contracts  
+
+etherjs使用教程：https://learnblockchain.cn/docs/ethers.js/index.html 
+
+hardhat使用教程：https://hardhat.org/tutorial
 
 
