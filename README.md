@@ -98,4 +98,6 @@ etherjs使用教程：https://learnblockchain.cn/docs/ethers.js/index.html
 
 hardhat使用教程：https://hardhat.org/tutorial
 
+智能合约solidity开发： https://docs.soliditylang.org/en/v0.8.15/
+
 
